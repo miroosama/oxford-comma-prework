@@ -4,6 +4,6 @@ array.join
 elsif array.length == 2
   array.join(" and ")
 else
-  array.join(', ') + " and " + array[-1] if array.length > 2
+  "#{self[0...-1].join(options[:words_connector])}#{options[:last_word_connector]}#{self[-1]}"
 end
 end
