@@ -4,6 +4,6 @@ array.join
 elsif array.length == 2
   array.join(" and ")
 else
-  array.to_sentence
+  array[0..-2].join(', ') + " and " + array[-1] if array.length > 1
 end
 end
